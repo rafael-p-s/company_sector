@@ -1,0 +1,20 @@
+.div_father {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+}
+
+select {
+  height: 40px;
+  font-size: 24px;
+  border-radius: 8px;
+  text-align: center;
+}
+input {
+  height: 20px;
+  width: 150%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 24px;
+}

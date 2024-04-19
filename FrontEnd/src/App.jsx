@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <Reasearch />
+      <Research />
     </>
   );
 }
