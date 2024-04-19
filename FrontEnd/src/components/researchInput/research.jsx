@@ -3,18 +3,19 @@ import styledropdown from "./Dropdown.module.css";
 
 export function Research() {
   const [selection, setSelection] = useState("todos");
+  
   const [teste, setTeste] = useState("Informe o nome da Empresa ou do Setor.");
   const handleSelect = (e) => {
     const value = e.target.value;
     setSelection(value);
     console.log(value);
-    if (value == "todos") {
+    if (value === "todos") {
       return setTeste("Informe o nome da Empresa ou do Setor.");
-    } else if (value == "company") {
-      return setTeste("Informe o nome da Empresa.");
-    } else {
-      return setTeste("Informe o nome do Setor.");
     }
+    if (value === "company") {
+      return setTeste("Informe o nome da Empresa.");
+    }
+    return setTeste("Informe o nome do Setor.");
   };
 
   return (
