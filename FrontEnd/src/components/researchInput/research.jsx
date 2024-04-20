@@ -21,14 +21,14 @@ export function Research() {
   return (
     <>
       <div className={styledropdown.div_father}>
-        <div className={styledropdown.select}>
+        <div className={styledropdown.div_select}>
           <select name="choices" id="management-choices" onClick={handleSelect}>
             <option value="todos">Todos</option>
             <option value="company">Empresas</option>
             <option value="sector">Setor</option>
           </select>
         </div>
-        <div className={styledropdown.input}>
+        <div className={styledropdown.div_input}>
           <input type="text" placeholder={teste} />
         </div>
       </div>

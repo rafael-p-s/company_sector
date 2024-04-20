@@ -2,7 +2,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: blue;
+  min-height: 10vh;
+}
+.div_select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7.5%;
+  margin: 0 1.5px; /* Espaçamento entre as divs */
+}
+.div_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  margin: 0 px; /* Espaçamento entre as divs */
 }
 
 select {
@@ -13,7 +27,7 @@ select {
 }
 input {
   height: 20px;
-  width: 150%;
+  width: 100%;
   padding: 10px;
   border-radius: 8px;
   font-size: 24px;
