@@ -1,10 +1,10 @@
 import { connection } from "../config/configDB.js";
 
-export async function createTableCompany() {
+export async function createTableSector() {
   const client = await connection();
   try {
     await client.query(
-      "CREATE TABLE IF NOT EXISTS Company (id SERIAL4 PRIMARY KEY, razao_social VARCHAR NOT NULL, nome_fantasia VARCHAR, cnpj VARCHAR NOT NULL)"
+      "CREATE TABLE IF NOT EXISTS Sector ( id SERIAL4 PRIMARY KEY, descricao VARCHAR NOT NULL)"
     );
   } catch (error) {
     console.error("Erro ao criar tabela:", error);
@@ -13,19 +13,15 @@ export async function createTableCompany() {
   }
 }
 //Create Table
-export async function insertCompany(company) {
+export async function insertSector(sector) {
   const client = await connection();
   try {
-    await client.query(
-      "INSERT INTO Company (razao_social, nome_fantasia, cnpj) VALUES ($1, $2, $3)",
-      [company.razao_social, company.nome_fantasia, company.cnpj]
-    );
+    await client.query("INSERT INTO Sector (descricao) VALUES ($1)", [
+      sector.descricao,
+    ]);
   } catch (error) {
     console.error("Error to try insert in the table: ", error);
   } finally {
     client.release();
   }
-//R
-
 }
-
