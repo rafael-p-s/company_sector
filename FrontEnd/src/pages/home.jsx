@@ -10,7 +10,7 @@ export function Home() {
       <NavBar>Company.Sector</NavBar>
       <Research />
       <BtnCompanySetor />
-      <MainTable />
+
     </>
   );
 }

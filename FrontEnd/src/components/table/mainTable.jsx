@@ -1,6 +1,14 @@
 import React from "react";
 
-export function MainTable() {
+export function MainTable({ selectedValue }) {
+//This function will check the selectedValue is ===null, if != will change de first latter inside the selectedValue
+  function capitalizeFirstLetter(string) {
+    if (string === null || string === undefined) {
+      return "";
+    }
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  const capitalizedSelectedValue = capitalizeFirstLetter(selectedValue);
   return (
     <>
       <div
@@ -22,9 +30,8 @@ export function MainTable() {
             justifyContent: "center",
           }}
         >
-          <h1>Teste</h1>
+          <h1>{capitalizedSelectedValue}</h1>
         </div>
-        
       </div>
     </>
   );
