@@ -10,12 +10,12 @@ app.use(express.json());
 await createTableCompany();
 await createTableSector();
 
-// app.get("/", (request, response) => {
-//   return response.json({
-//     evento: "Avaliação",
-//     feito: "Rafael Prado",
-//   });
-// });
+app.get("/", (request, response) => {
+  return response.json({
+    evento: "Avaliação",
+    feito: "Rafael Prado",
+  });
+});
 
 //C
 app.post("/company", async function (req, res) {
